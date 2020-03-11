@@ -114,3 +114,50 @@ function neverReturns(): never {
 	// why? this function not returning anything, thats why no void
 	throw new Error('An Error');
 }
+
+//Nullable types
+// all un-initialized variables are undefined
+let canBeNull: number | null;
+canBeNull = null;
+canBeNull = 10; // this will throw error if only type used is null, use union types
+
+let canThisBeAny = null;
+canThisBeAny = 10;
+
+/*
+Try to be as explicit as possible and add Types to everything you can!
+
+let bankAccount = {
+    money: 2000,
+    deposit(value) {
+        this.money += value;
+    }
+};
+
+let myself = {
+    name: "Max",
+    bankAccount: bankAccount,
+    hobbies: ["Sports", "Cooking"]
+};
+
+myself.bankAccount.deposit(3000);
+
+console.log(myself);
+*/
+
+type bankAcc = { money: number; deposit: (value: number) => void };
+let bankAccount: bankAcc = {
+	money: 2000,
+	deposit: function(value: number) {
+		this.money += value;
+	}
+};
+
+let myself: { name: string; bankAccount: bankAcc; hobbies: string[] } = {
+	name: 'test',
+	bankAccount: bankAccount,
+	hobbies: [ 'Sports', 'Cooking' ]
+};
+
+myself.bankAccount.deposit(3000);
+console.log(myself);

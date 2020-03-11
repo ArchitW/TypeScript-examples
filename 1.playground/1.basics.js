@@ -87,3 +87,28 @@ var finalValue = 'its a string';
 if (typeof finalValue === 'string') {
     console.log('yeah this is a string');
 }
+//never
+function neverReturns() {
+    // why? this function not returning anything, thats why no void
+    throw new Error('An Error');
+}
+//Nullable types
+// all un-initialized variables are undefined
+var canBeNull;
+canBeNull = null;
+canBeNull = 10; // this will throw error if only type used is null, use union types
+var canThisBeAny = null;
+canThisBeAny = 10;
+var bankAccount = {
+    money: 2000,
+    deposit: function (value) {
+        this.money += value;
+    }
+};
+var myself = {
+    name: 'max',
+    bankAccount: bankAccount,
+    hobbies: ['Sports', 'Cooking']
+};
+myself.bankAccount.deposit(3000);
+console.log(myself);

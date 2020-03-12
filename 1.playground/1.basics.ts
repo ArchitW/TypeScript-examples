@@ -40,7 +40,7 @@ console.log(myColor);
 let car: any = 'BMW';
 
 //functions
-
+// u can provide return type [void, number, string, boolean]
 function returnMyName(): string {
 	let name: string = 'test';
 	return name;
@@ -60,9 +60,9 @@ console.log(multiply(10, 2));
 
 //function types, calling
 let sayH;
-sayH = returnVoid;
+sayH = returnVoid; // assigning function
 console.log(sayH);
-sayH();
+sayH(); // executing a function, note()
 
 let myMultiply: (val1: number, val2: number) => number; // name does not matter, type matter
 myMultiply = multiply;
@@ -75,7 +75,7 @@ let obj: { name: string; age: number } = {
 };
 
 // you can not assign obj with different keys obj = {} will throw error.
-// in function order if important.
+// in function order is important.
 // in objects keys are important.
 
 //complex object
@@ -122,6 +122,7 @@ let canThisBeAny = null;
 canThisBeAny = 10;
 
 /*
+Exercise: 
 Try to be as explicit as possible and add Types to everything you can!
 
 let bankAccount = {

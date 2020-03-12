@@ -7,8 +7,6 @@ noImplicitAny[default:false] :
 strictNullChecks : scan files to check if variables are Null, useful if we forget to ini variables
 noUnusedParameters[default:false] : check if params are used <declared but never used>
 */
-//array
-
 //Strings
 let strings: string = 'this is string';
 //numbers
@@ -17,6 +15,7 @@ let numbers: number = 12;
 //booleans
 let bools: boolean = true;
 
+//array
 let arrayOfNumbers = [ 10, 20, 30, 40 ];
 let arrayOfStrings = [ 'aa', 'aaa', 'aaaa' ];
 let arrayOfAnything: any[] = [ 1, '1', 'aa', '2' ];

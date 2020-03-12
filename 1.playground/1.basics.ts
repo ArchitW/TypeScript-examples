@@ -1,24 +1,22 @@
 /*
 tsc --init // compile all ts files to js
-Available types
-
-string = "this is string"   let var = "test" or let var:string
-number = 1, 10.1            let var:number
-boolean  = true/false       ler var:bool
-
-arrays = let array = [10,20,30,40]  
-
-let arrayOfNumbers = [ 10, 20, 30, 40 ];
-let arrayOfStrings = [ 'aa', 'aaa', 'aaaa' ];
-let arrayOfAnything: any[] = [ 1, '1', 'aa', '2' ];
-
-tuples : if we know types in the array already
-let address :[string, number] = ["my string", 100] //note order is important
-
-enum 
-
+ts config:
+----------
+sourceMap [default:false] : .ts files are seraved on server, used for debugging
+noImplicitAny[default:false] :  
+strictNullChecks : scan files to check if variables are Null, useful if we forget to ini variables
+noUnusedParameters[default:false] : check if params are used <declared but never used>
 */
 //array
+
+//Strings
+let strings: string = 'this is string';
+//numbers
+let numbers: number = 12;
+
+//booleans
+let bools: boolean = true;
+
 let arrayOfNumbers = [ 10, 20, 30, 40 ];
 let arrayOfStrings = [ 'aa', 'aaa', 'aaaa' ];
 let arrayOfAnything: any[] = [ 1, '1', 'aa', '2' ];

@@ -17,7 +17,8 @@ let bools: boolean = true;
 
 //array
 let arrayOfNumbers = [ 10, 20, 30, 40 ];
-let arrayOfStrings = [ 'aa', 'aaa', 'aaaa' ];
+let arrayOfStrings: string[] = [ 'aa', 'aaa', 'aaaa' ];
+let arrayOfStrings2: Array<string>;
 let arrayOfAnything: any[] = [ 1, '1', 'aa', '2' ];
 
 //tuples

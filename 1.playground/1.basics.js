@@ -8,15 +8,16 @@ noImplicitAny[default:false] :
 strictNullChecks : scan files to check if variables are Null, useful if we forget to ini variables
 noUnusedParameters[default:false] : check if params are used <declared but never used>
 */
-//array
 //Strings
 var strings = 'this is string';
 //numbers
 var numbers = 12;
 //booleans
 var bools = true;
+//array
 var arrayOfNumbers = [10, 20, 30, 40];
 var arrayOfStrings = ['aa', 'aaa', 'aaaa'];
+var arrayOfStrings2;
 var arrayOfAnything = [1, '1', 'aa', '2'];
 //tuples
 var address = ['my string', 100]; //note order is important
@@ -35,6 +36,7 @@ console.log(myColor);
 //any : careful with any, try to avoid it, gives up all the advantages TS offers
 var car = 'BMW';
 //functions
+// u can provide return type [void, number, string, boolean]
 function returnMyName() {
     var name = 'test';
     return name;
@@ -50,9 +52,9 @@ function multiply(num1, num2) {
 console.log(multiply(10, 2));
 //function types, calling
 var sayH;
-sayH = returnVoid;
+sayH = returnVoid; // assigning function
 console.log(sayH);
-sayH();
+sayH(); // executing a function, note()
 var myMultiply; // name does not matter, type matter
 myMultiply = multiply;
 console.log(myMultiply(10, 20));
@@ -62,7 +64,7 @@ var obj = {
     age: 20
 };
 // you can not assign obj with different keys obj = {} will throw error.
-// in function order if important.
+// in function order is important.
 // in objects keys are important.
 //complex object
 var complexObj = {

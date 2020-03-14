@@ -1,2 +1,2 @@
- 1.playground/node_modules/
+ 1.playground/node_modules/**/*
  2.classes&objects/node_modules/**/*
